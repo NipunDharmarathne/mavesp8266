@@ -340,7 +340,7 @@ void loop() {
             //Serial.println("Read CGS Msg Raw");
             delay(0);
             Vehicle.readMessageRaw();
-            Serial.println("Read Vehicle Msg Raw");
+            //Serial.println("Read Vehicle Msg Raw");
 
         } else {
             //Serial.println("--------- GCS --------");
@@ -350,8 +350,8 @@ void loop() {
             delay(0);
             //Serial.println("------ Vehicle -------");
             Vehicle.readMessage();
-            Serial.println("Read Vehicle Msg");
-            Serial.println(" ");
+            //Serial.println("Read Vehicle Msg");
+            //Serial.println(" ");
         }
     }
     updateServer.checkUpdates();

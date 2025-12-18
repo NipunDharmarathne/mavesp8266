@@ -143,12 +143,14 @@ MavESP8266Component::_sendStatusMessage(MavESP8266Bridge* sender, uint8_t type, 
     //-- Build message
     mavlink_message_t msg;
     mavlink_msg_statustext_pack_chan(
-        getWorld()->getVehicle()->systemID(),
-        MAV_COMP_ID_UDP_BRIDGE,
-        sender->_send_chan,
-        &msg,
-        type,
-        text
+        getWorld()->getVehicle()->systemID(), // system_id
+        MAV_COMP_ID_UDP_BRIDGE,               // component_id
+        sender->_send_chan,                   // channel
+        &msg,                                 // message pointer
+        type,                                 // severity
+        text,                                 // text
+        0,                                    // id (0 = no chunking)
+        0                                     // chunk_seq
     );
     sender->sendMessage(&msg);
 }

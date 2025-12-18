@@ -1,0 +1,25 @@
+Activate environment:
+C:\Users\user\.platformio\penv\Scripts\activate.bat
+
+Upload for ESP32-WROOM (ESP32-WROOM-32UE):
+platformio run -e espwroom32 -t upload
+
+---------------------------------------------------------------------
+
+Press EN(Reset Button)
+Connect to ESP32_GW network
+Open browser with 192.168.4.1
+
+Setup:
+WiFi Mode: Station
+Station SSID: Dialog_4G_IBBA
+Station Password: 12345ibba
+Station IP: 192.168.0.10
+Station Gateway: 192.168.0.254
+Station Subnet: 255.255.255.0
+Host Port: 14550
+Client Port: 14555
+Baudrate: 57600
+
+Press EN(Reset Button)
+Open browser with Station IP

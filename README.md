@@ -1,4 +1,5 @@
 # MavESP8266
+# C:\Users\user\.platformio\penv\Scripts\activate.bat
 
 ## Current Binary
 
